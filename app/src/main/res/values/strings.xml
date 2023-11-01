@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">ArtSpace</string>
-    <string name="next"> > </string>
+    <string name="next"> &lt;</string>
+    <string name="nextnext"> > </string>
     <string name="nature"> vsfv </string>
+    <string name="dala"> dala </string>
+    <string name="three"> sfsv </string>
 </resources>

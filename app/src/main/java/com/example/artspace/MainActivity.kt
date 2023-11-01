@@ -54,14 +54,28 @@ fun ArtSpaceApp(){
         1 -> ArtSpace(
             textlabel = R.string.nature,
             drawableRes = R.drawable.first,
-            onNextClick = { result = 2 }
+            onNextClick = { },
+            on = {result = 2}
         )
+        2 -> ArtSpace(
+            textlabel = R.string.dala,
+            drawableRes = R.drawable.photo,
+            onNextClick = { result = 1},
+           on = { result = 3}
+        )
+        3 -> ArtSpace(
+            textlabel = R.string.three,
+            drawableRes = R.drawable.third,
+            onNextClick = { result = 2 },
+            on = { })
     }
+
+
+
 }
 
 @Composable
-fun ArtSpace(textlabel:Int,drawableRes:Int,onNextClick: () -> Unit,modifier: Modifier = Modifier) {
-    val image = painterResource(R.drawable.first)
+fun ArtSpace(textlabel:Int,drawableRes:Int,onNextClick: () -> Unit,on:()->Unit,modifier: Modifier = Modifier) {
     Row(
         horizontalArrangement = Arrangement.Center,
         verticalAlignment = Alignment.CenterVertically
@@ -95,9 +109,9 @@ fun ArtSpace(textlabel:Int,drawableRes:Int,onNextClick: () -> Unit,modifier: Mod
 
 
         }
-        Text(
-            text = ">"
-        )
+        Button(onClick = on){
+            Text(text = stringResource(R.string.nextnext))
+        }
 
     }
 
