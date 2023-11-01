@@ -9,8 +9,10 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
@@ -87,10 +89,12 @@ fun ArtSpace(textlabel:Int,textAvtor:Int,drawableRes:Int,onNextClick: () -> Unit
     .wrapContentSize(Alignment.Center)) {
     Row(
         horizontalArrangement = Arrangement.Center,
-        verticalAlignment = Alignment.CenterVertically
+        verticalAlignment = Alignment.CenterVertically,
+
     ) {
 
-         Button(onClick = onNextClick){
+         Button(onClick = onNextClick
+             ){
             Text(text = stringResource(R.string.next))
         }
 
@@ -106,21 +110,25 @@ fun ArtSpace(textlabel:Int,textAvtor:Int,drawableRes:Int,onNextClick: () -> Unit
                 painter = painterResource(drawableRes),
                 contentDescription = null,
                 modifier = Modifier
-                    .size(250.dp)
-                    .padding(top = 20.dp)
+                    .width(250.dp)
+                    .height(500.dp)
+
+
             )
             Text(
                 text = stringResource(textlabel),
                 color = Color(0xFF272C8C), // Color(0xFFRRGGBB) for the desired color
-                fontSize = 23.sp,
+                fontSize = 33.sp,
             )
             Text(
-                text = stringResource(textAvtor)
+                text = stringResource(textAvtor),
+                fontSize = 23.sp,
             )
 
 
         }
-        Button(onClick = on
+        Button(onClick = on,
+
 
         ){
             Text(text = stringResource(R.string.nextnext),
