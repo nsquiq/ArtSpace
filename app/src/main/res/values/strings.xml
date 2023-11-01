@@ -2,7 +2,10 @@
     <string name="app_name">ArtSpace</string>
     <string name="next"> &lt;</string>
     <string name="nextnext"> > </string>
-    <string name="nature"> vsfv </string>
-    <string name="dala"> dala </string>
-    <string name="three"> sfsv </string>
+    <string name="nature"> "While riding a boat" </string>
+    <string name="dala"> "Cozy meeting" </string>
+    <string name="three"> "Going into trance"</string>
+    <string name="natureDescription">John Adam</string>
+    <string name="dalaDescription"> Christin Kenelly</string>
+    <string name="threeDescription"> Michelle Ken</string>
 </resources>
